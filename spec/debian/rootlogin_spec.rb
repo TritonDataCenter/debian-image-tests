@@ -7,11 +7,11 @@ require 'spec_helper'
 # Make sure default live-build password is not set
 # We want to explicitly test for this first to ensure the default password from
 # the live-build is not leaking through.
-describe command('cat /etc/shadow | grep root | awk -F':' '{print $2;}'') do
+describe command("cat /etc/shadow | grep root | awk -F':' '{print $2;}'") do
   it { should_not return_stdout "$1$qHFOhAjw$AjgoyfS8u32uqV8qsL1r70" }
 end
 
 # Make sure no password is set
-describe command('cat /etc/shadow | grep root | awk -F':' '{print $2;}'') do
+describe command("cat /etc/shadow | grep root | awk -F':' '{print $2;}'") do
   it { should return_stdout "" }
 end

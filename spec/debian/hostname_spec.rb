@@ -5,3 +5,6 @@ describe command('hostname') do
   it { should_not return_stdout 'debian-7' }
 end
 
+describe command('hostname') do
+  it { should_not return_stdout 'bad' }
+end

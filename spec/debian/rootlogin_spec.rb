@@ -11,9 +11,9 @@ describe command("cat /etc/shadow | grep root | awk -F':' '{print $2;}'") do
   it { should_not return_stdout "$1$qHFOhAjw$AjgoyfS8u32uqV8qsL1r70" }
 end
 
-# Make sure no password is set
+# Make sure a password is set IMAGE-459
 describe command("cat /etc/shadow | grep root | awk -F':' '{print $2;}'") do
-  it { should return_stdout "" }
+  it { should_not return_stdout "" }
 end
 
 # Make sure ssh login is via ssh key only. This is required since we are enabling

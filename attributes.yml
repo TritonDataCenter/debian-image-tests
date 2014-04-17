@@ -2,5 +2,5 @@ debian-7:
   :roles:
     - debian
   :name: debian 7
-  :version: 20140325
+  :version: 20140417
   :doc_url: http://wiki.joyent.com/jpc2/Debian

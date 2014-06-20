@@ -20,7 +20,7 @@ describe package('less') do
   it { should be_installed }
 end
 
-describe package('lsb_release') do
+describe package('lsb-release') do
   it { should be_installed }
 end
 

@@ -20,10 +20,6 @@ describe package('less') do
   it { should be_installed }
 end
 
-describe package('lsb-release') do
-  it { should be_installed }
-end
-
 describe package('login-duo') do
   it { should be_installed }
 end

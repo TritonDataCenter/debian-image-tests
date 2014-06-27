@@ -8,3 +8,7 @@ end
 describe command('hostname') do
   it { should_not return_stdout 'bad' }
 end
+
+describe command('hostname') do
+  it { should_not return_stdout 'none' }
+end

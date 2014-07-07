@@ -40,6 +40,10 @@ describe package('parted') do
   it { should be_installed }
 end
 
+describe package('python') do
+  it { should be_installed }
+end
+
 describe package('vim') do
   it { should be_installed }
 end

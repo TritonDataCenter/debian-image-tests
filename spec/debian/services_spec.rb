@@ -16,3 +16,6 @@ describe service('ssh') do
   it { should be_enabled }
 end
 
+describe service('ntp') do
+  it { should be_enabled }
+end

@@ -1,6 +1,0 @@
-debian-7:
-  :roles:
-    - debian
-  :name: Debian 7.6 (wheezy)
-  :version: 20140912
-  :doc_url: http://wiki.joyent.com/jpc2/Debian

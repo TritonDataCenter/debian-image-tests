@@ -1,0 +1,6 @@
+debian-7:
+  :roles:
+    - debian
+  :name: Debian 7.8 (wheezy)
+  :version: 20150128 
+  :doc_url: https://docs.joyent.com/images/linux/debian 

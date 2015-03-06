@@ -8,12 +8,12 @@ require 'spec_helper'
 # We want to explicitly test for this first to ensure the default password from
 # the live-build is not leaking through.
 describe command("cat /etc/shadow | grep root | awk -F':' '{print $2;}'") do
-  it { should_not return_stdout "$1$qHFOhAjw$AjgoyfS8u32uqV8qsL1r70" }
+  its(:stdout) { should_not eq "$1$qHFOhAjw$AjgoyfS8u32uqV8qsL1r70" }
 end
 
 # Make sure a password is set IMAGE-459
 describe command("cat /etc/shadow | grep root | awk -F':' '{print $2;}'") do
-  it { should_not return_stdout "" }
+  its(:stdout) { should_not eq "" }
 end
 
 # Make sure ssh login is via ssh key only. This is required since we are enabling

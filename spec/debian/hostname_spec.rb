@@ -2,13 +2,13 @@ require 'spec_helper'
 
 # Ensure hostname is not carried over from live-cd build
 describe command('hostname') do
-  it { should_not return_stdout 'debian-7' }
+  its(:stdout) { should_not eq 'debian-7' }
 end
 
 describe command('hostname') do
-  it { should_not return_stdout 'bad' }
+  its(:stdout) { should_not eq 'bad' }
 end
 
 describe command('hostname') do
-  it { should_not return_stdout 'none' }
+  its(:stdout) { should_not eq 'none' }
 end
